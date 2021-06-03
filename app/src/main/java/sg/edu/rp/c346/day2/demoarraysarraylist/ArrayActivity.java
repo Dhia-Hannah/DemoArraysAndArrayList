@@ -9,6 +9,8 @@ public class ArrayActivity extends AppCompatActivity {
 
     TextView tv;
 
+    String title = "Fruits\n=====\n";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,19 @@ public class ArrayActivity extends AppCompatActivity {
 
         //continue view the code in the worksheet
 
+        String [] fruits = new String [3];
 
+        fruits[0] = "apple";
+        fruits[1] = "banana";
+        fruits[2] = "cherry";
+
+        String msg = "";
+        msg += title;
+        for (int i = 0; i < fruits.length; i ++){
+            msg += fruits[i] + "\n";
+        }
+
+        tv.setText(msg);
 
     }
 }
